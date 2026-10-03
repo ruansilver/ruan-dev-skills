@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ruan Dev Skills"
+  short_description: "Initialize and adjust recoverable AI development docs"
+  default_prompt: "使用 $ruan-dev-skills 初始化、恢复或调整指定版本的 AI 接力开发资料；只管理资料，不修改业务代码。"

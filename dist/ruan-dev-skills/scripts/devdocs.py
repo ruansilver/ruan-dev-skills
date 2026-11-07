@@ -217,9 +217,9 @@ def pending_plan_dirs(root: Path, plans: Path) -> list[str]:
 def set_scoped_attributes(root: Path) -> None:
     path = root / ".gitattributes"
     text = path.read_text(encoding="utf-8") if path.exists() else ""
-    if not any(line.strip() == "plans/** -text" for line in text.splitlines()):
+    if not any(line.strip() == "**/plans/** -text" for line in text.splitlines()):
         separator = "" if not text or text.endswith("\n") else "\n"
-        path.write_text(text + separator + "plans/** -text\n", encoding="utf-8")
+        path.write_text(text + separator + "**/plans/** -text\n", encoding="utf-8")
 
 
 def cmd_archive(args: argparse.Namespace) -> None:
